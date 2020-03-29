@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>select dropdown</title>
+        <script type="text/javascript">
+        function select() {
+            var sel1=document.getElementById("sel");
+            //alert(sel1.value);
+            alert(sel1.options[sel1.selectedIndex].value);
+        }
+        
+        </script>
+    </head>
+    <body>
+        <select id="sel">
+            <option></option>
+            <option value="bellandur">bellandur</option>
+            <option value="hsr">hsr</option>
+            <option value="sarjapur">sarjapur</option>
+        </select>
+        <button onclick="select()" >click</button>
+    </body>
+</html>
