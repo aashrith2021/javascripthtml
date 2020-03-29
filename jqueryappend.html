@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>jquery append</title>
+    <link rel="stylesheet" href="jqueryappendcss.css">
+</head>
+
+<body>
+    <button id="btn1">append</button>
+    <button id="btn2">after</button>
+    <button id="btn3">prepend</button>
+    <button id="btn4">before</button>
+    <br>
+    <br>
+    <button id="btn5">remove</button>
+    <button id="btn6">empty </button>
+   <div id="div1" class="mydiv">
+    <h2 id="head1">setup jquery</h2>
+</div>
+</body>
+
+<script src="jquery.js" type="text/javascript">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#head1").append("<p>continue with this</p>");
+        });
+        $("#btn2").click(function(){
+            $("#head1").after("<p>continue with this</p>");
+        });
+        $("#btn3").click(function(){
+            $("#head1").prepend("<p>continue with this</p>");
+        });
+        $("#btn4").click(function(){
+            $("#head1").before("<p>continue with this</p>");
+        });
+        $("#btn5").click(function(){
+            $("#head1").remove();
+        });
+        $("#btn6").click(function(){
+            $("#head1").empty("<p>continue with this</p>");
+        });
+         
+    })
+</script>
+
+</html>
