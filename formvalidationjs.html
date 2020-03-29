@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>form validation</title>
+        <script type="text/javascript">
+            function validate()
+          {
+                var peru=document.getElementById("name");
+                var passw=document.getElementById("pass");
+                if(peru.value.trim()=="")
+                {
+                peru.style.border="solid 2px red";
+                    //alert("musukoni rai");
+                    document.getElementById("lb1").style.visibility="visible";
+                    return false;
+                }
+                else if(passw.value.trim()== ""){
+                    //alert("malli");
+                    passw.style.border="solid 2px red";
+                    document.getElementById("lb2").style.visibility="visible";
+                    return false;
+                }
+
+                else if(passw.value.trim().length<5)
+                 {  //alert("malli rai");
+                    passw.style.border="solid 2px red";
+                    document.getElementById("lb3").style.visibility="visible";
+                    return false;
+                }
+                else{
+                    return true;
+                    
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="msg.html">
+            <input id="name" type="text" placeholder="username" >
+            <label id="lb1" style="color:red; visibility:hidden;">Invalid</label>
+            <br><br>
+            <input id="pass" type="password" placeholder="password">
+            <label id="lb2" style="color:red; visibility:hidden;">Invalid</label>
+            <label id="lb3" style="color:red; visibility:hidden;">enter stronger password</label>
+            <br><br>
+            
+            <button type="submit">Login</button>
+            <!--or we can add required in the input block but empty strings are allowed in this case-->
+        </form>
+    </body>
+
+</html>
