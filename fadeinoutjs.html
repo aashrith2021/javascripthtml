@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>fade in fade out</title>
+        <script type="text/javascript">
+        var opacity=0;
+        var intervalid=0;
+        function fadeout() {
+            intervalid=setInterval(hide,80);
+        }
+        function fadein(){
+            intervalid=setInterval(show,80);
+        }
+        function show() {
+            var image= document.getElementById("img");
+            var opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"))
+            if(opacity<1)
+            {
+                opacity=opacity+0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(intervalid);
+            }
+        }
+        function hide(){
+            var image= document.getElementById("img");
+            var opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"))
+            if(opacity>0)
+            {
+                opacity=opacity-0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(intervalid);
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="fadein()" id="in">fade in</button><br><br>
+        <img id="img" src="cah2.jpg" width="300"><br><br>
+        <button onclick="fadeout()" id="out">fade out</button>
+        
+    </body>
+</html>
