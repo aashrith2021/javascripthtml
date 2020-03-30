@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            my page 
+        </title>
+ <script type="text/javascript">
+
+function  button() {
+   var str1=document.getElementById("btn1").value;
+   var str2=document.getElementById("btn2").value;
+   var str3=document.getElementById("btn3").value;
+   if(str2==str3){
+    alert("you are in");
+   }
+   else
+   {
+       alert("wrong");
+   }
+   
+}
+            </script>
+    </head>
+    <body>
+        <h1 id="dell">hello world</h1>
+        <input id="btn1" type="text" placeholder="username" />
+        <br>
+        <br>
+        <input id="btn2" type="password" placeholder="password" />
+        <br>
+        <br>
+        <input id="btn3" type="password" placeholder="confirm password" />
+        <br>
+        <br>
+        <button onclick="button()" id="click">Signup</button>
+        
+    </body>
+</html>
