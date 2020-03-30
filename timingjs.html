@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>timing</title>
+    <script type="text/javascript">
+    var idi=0;
+    seconds=0
+    function msg()
+    {
+        document.getElementById("t").innerHTML=seconds+"sec passed";
+        seconds++;
+    }
+    function start()
+    {
+        idi=window.setInterval(msg,1000);
+    }
+    function stop()
+    {
+       window.clearTimeout(idi);
+    }
+
+    </script>
+    </head>
+    <body>
+        <button onclick="start()" id="start" type="button">start</button>
+        <h2 id="t">Timing</h2>
+        <button onclick="stop()" id="stop" type="button">stop</button>
+    </body>
+    </html>
