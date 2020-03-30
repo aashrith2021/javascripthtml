@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>phone num email id validation</title>
+        <script type="text/javascript">
+        function validate()
+        {   
+            //(\d)-to include an numbers from 0-9
+            //[\w]-to include a-z A-Z 0-9 & _
+            var text=document.getElementById("phno").value;
+            var email=document.getElementById("email").value;
+            var regx=/^[7-9]\d{9}$/;
+            var regy=/^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,4})$/;
+            //+ is used to give limitless character input
+            //{}to limit 
+            //? is used to make the validation in reg exp optional
+            //we use ^ and $ to start and stop the reg condition
+            if(regx.test(text) && regy.test(email))
+            {   
+                document.getElementById("msg").innerHTML="Valid";
+                document.getElementById("msg").style.visibility="visible";
+                document.getElementById("msg").style.color="green";
+
+            }
+            else{
+                document.getElementById("msg").innerHTML="Invalid email or phno";
+                document.getElementById("msg").style.visibility="visible";
+                document.getElementById("msg").style.color="red";
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+        <input id="phno" type="text" placeholder="phone number"></input>
+        <br><br>
+        <input id="email" type="text" placeholder="emailid"></input>
+        <br>
+        <label id="msg" style="color: red; font-size: 19px; visibility: hidden;">Valid</label>
+
+        <br>
+
+        <button onclick="validate()" type="button">submit</button>
+        </form>
+    </body>
+</html>
