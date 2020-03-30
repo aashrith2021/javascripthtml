@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <title>second page javascript</title>
+            <meta charset="utf-8">
+            <script type="text/javascript">
+            function fn1() {
+                var rd1=document.getElementById("rd1");
+                var rd2=document.getElementById("rd2");
+                if(rd1.checked==true)
+                {
+                    alert("u selected single");
+                }
+                else if(rd2.checked==true){
+                    alert("u selected double");
+                }
+                else{
+                    alert("ntg selected")
+                }
+                
+            }
+            </script>
+            
+    </head>
+    <body>
+        <!--we use the same name for radio buttons for one single selection among them,we change the name to give different names to them-->
+        <input id="rd1" name="one" type="radio" value="single">single</input>
+       <br> <input id="rd2" name="one" type="radio" value="double">double</input>
+        <br>
+        <button onclick="fn1()" value="click">click me</button> 
+    </body>
+   
+
+</html>
