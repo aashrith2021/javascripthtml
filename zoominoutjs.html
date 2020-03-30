@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>zoom in zoom out</title>
+        <script type="text/javascript">
+        var intervalid=0;
+        var width=450;
+        var difference=30;
+        function increase()
+        {
+            clearInterval(intervalid);
+             intervalid=setInterval(zoomin,10);
+
+        }
+        function zoomin()
+        {
+            
+            if(width<400){
+                width=width+difference;
+                document.getElementById("img1").style.width=width;
+            }
+            else{
+                clearInterval(intervalid);
+            }
+
+        }
+        function decrease()
+        {
+            clearInterval(intervalid);
+            intervalid=setInterval(zoomout,10);
+        }
+        function zoomout()
+        {
+            
+            if(width>300){
+                width=width-difference;
+                document.getElementById("img1").style.width=width;
+            }
+            else{
+                clearInterval(intervalid);
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        <img id=img1 onmouseover="increase()" onmouseout="decrease()" src=cah4.jpg  width="450">
+    </body>
+</html>
